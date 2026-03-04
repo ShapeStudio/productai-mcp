@@ -84,9 +84,9 @@ server.tool(
       ),
     model: z
       .enum(MODELS)
-      .default("gpt-medium")
+      .default("nanobananapro")
       .describe(
-        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, kontext-pro, kontext-max, nanobananapro, nanobanana, seedream. Default: gpt-medium"
+        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, kontext-pro, kontext-max, nanobananapro, nanobanana, seedream. Default: nanobananapro"
       ),
   },
   async ({ image_url, prompt, model }) => {
@@ -241,9 +241,9 @@ server.tool(
       ),
     model: z
       .enum(MODELS)
-      .default("gpt-medium")
+      .default("nanobananapro")
       .describe(
-        "AI model to use. Default: gpt-medium"
+        "AI model to use. Default: nanobananapro"
       ),
     max_wait_seconds: z
       .number()
