@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "productai": {
+      "command": "node",
+      "args": [
+        "./mcp/productai/index.js"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PRODUCTAI_API_KEY"
+      ]
+    }
+  }
+}

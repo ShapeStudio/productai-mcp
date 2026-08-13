@@ -1,6 +1,13 @@
-# ProductAI MCP Server
+# ProductAI Plugin and MCP Server
 
-MCP server for [ProductAI](https://create.productai.photo) — generate AI-powered product photos.
+Codex plugin and MCP server for [ProductAI](https://create.productai.photo) — generate AI-powered product photos.
+
+The repository contains:
+
+- An installable Codex plugin manifest in `.codex-plugin/plugin.json`
+- ProductAI workflow guidance in `skills/productai-workflows/`
+- A self-contained MCP bundle in `mcp/productai/`
+- The TypeScript MCP source in `src/`
 
 ## Tools
 
@@ -19,6 +26,14 @@ Multi-image input is supported with `seedream` and `nanobanana` models.
 
 ## Setup
 
+### Install as a Codex plugin
+
+Install the plugin from this repository, then set `PRODUCTAI_API_KEY` in the environment used to launch Codex. The plugin starts the bundled MCP server from `mcp/productai/index.js`.
+
+Get an API key from the [ProductAI API access dashboard](https://create.productai.photo/dashboard/api-access).
+
+### Run the MCP server from source
+
 ### 1. Get your API key
 
 Sign up at [ProductAI](https://create.productai.photo) and get your API key from the dashboard.
@@ -31,9 +46,9 @@ npm install
 npm run build
 ```
 
-### 3. Configure in Claude
+### 3. Configure an MCP client
 
-Add to your Claude config (`claude_desktop_config.json`):
+Use the built server in any stdio-compatible MCP client. For Claude Desktop, add this to `claude_desktop_config.json`:
 
 ```json
 {

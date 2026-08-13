@@ -1,0 +1,4 @@
+interface:
+  display_name: "ProductAI Photo Studio"
+  short_description: "Create accurate, on-brand product photography"
+  default_prompt: "Use $productai-workflows to create an on-brand hero image from my product photo."
