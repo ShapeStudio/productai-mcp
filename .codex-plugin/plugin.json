@@ -1,0 +1,40 @@
+{
+  "name": "productai",
+  "version": "0.1.0+codex.20260803190832",
+  "description": "Generate accurate, on-brand AI product photography with ProductAI.",
+  "author": {
+    "name": "Shape d.o.o.",
+    "url": "https://www.shape-labs.com/"
+  },
+  "homepage": "https://www.productai.photo/",
+  "repository": "https://github.com/ShapeStudio/productai-mcp",
+  "keywords": [
+    "productai",
+    "product-photography",
+    "e-commerce",
+    "image-generation"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "ProductAI",
+    "shortDescription": "Create accurate, on-brand AI product photos.",
+    "longDescription": "Turn product shots into production-ready e-commerce and marketing images with scene generation, editing, model selection, and asynchronous job tracking.",
+    "developerName": "ProductAI by Shape",
+    "category": "Creative",
+    "capabilities": [
+      "Generate images",
+      "Edit product photos",
+      "Track generation jobs"
+    ],
+    "websiteURL": "https://www.productai.photo/",
+    "privacyPolicyURL": "https://www.productai.photo/legal",
+    "composerIcon": "./assets/productai-icon.png",
+    "logo": "./assets/productai-icon.png",
+    "defaultPrompt": [
+      "Create an on-brand hero image from this product shot.",
+      "Place this product in a realistic lifestyle scene.",
+      "Generate a clean e-commerce photo on a white background."
+    ]
+  }
+}
