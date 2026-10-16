@@ -39,7 +39,12 @@ Keep labels, logos, packaging geometry, and product colors faithful to the sourc
 - Use `get_job` to check once.
 - Use `wait_for_job` when the user asks to wait for an existing job.
 
-Use `nanobananapro` by default for best-quality single-image work. Use `seedream` or `nanobanana` when multiple source-image URLs are required. Choose another model only when the user requests it or the model's tradeoff is relevant.
+Use `nanobananapro` by default for best-quality single-image work. Choose another model only when the user requests it or the model's tradeoff is relevant:
+
+- Small precise edit that must keep the product, composition and background untouched: `gpt-2.5-precise`
+- Best GPT model: `gpt-2.5`
+- Cheaper Nano Banana: `nanobanana2.1`
+- Multiple source-image URLs (up to 5): `nanobananapro`, `nanobanana2.1`, `gpt-2.5`, `gpt-2.5-precise`, or `seedream`
 
 ## Execute safely
 
