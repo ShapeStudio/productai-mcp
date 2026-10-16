@@ -24,7 +24,7 @@ The repository contains:
 
 - `gpt-2.5` — OpenAI GPT Image 2.5, the best GPT model: better images and faster (~11s) than `gpt-2`. 10 credits.
 - `gpt-2.5-precise` — GPT Image 2.5 precise-edit variant: changes only what the prompt asks and keeps the product, composition and background as they are. Best for small targeted edits to an existing photo. A little slower (~15–20s). 10 credits.
-- `nanobanana2.1` — Google Nano Banana 2.1, the successor to `nanobanana2`: better and cheaper. 5 credits.
+- `nanobanana2.1` — Google Nano Banana 2.1, the successor to `nanobanana2`: better quality at the same 5 credits.
 
 Multi-image input (an array of up to 5 image URLs; up to 10 for `seedream-5-lite` / `seedream-5-pro`) is supported with the `gpt-1.5`, `gpt-2`, `gpt-2.5`, `gpt-2.5-precise`, `nanobanana`, `nanobananapro`, `nanobanana2`, `nanobanana2.1`, `seedream`, `seedream-5-lite` and `seedream-5-pro` models.
 
