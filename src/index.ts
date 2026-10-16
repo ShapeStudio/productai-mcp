@@ -99,9 +99,9 @@ server.tool(
       ),
     model: z
       .enum(MODELS)
-      .default("nanobananapro")
+      .default("nanobanana2.1")
       .describe(
-        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, gpt-1.5, gpt-2, gpt-2.5 (best GPT model), gpt-2.5-precise (small targeted edits that keep the product, composition and background unchanged), kontext-pro, kontext-max, nanobananapro, nanobanana, nanobanana2, nanobanana2.1 (cheaper Nano Banana), seedream, seedream-5-lite, seedream-5-pro. Default: nanobananapro"
+        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, gpt-1.5, gpt-2, gpt-2.5 (best GPT model), gpt-2.5-precise (small targeted edits that keep the product, composition and background unchanged), kontext-pro, kontext-max, nanobananapro, nanobanana, nanobanana2, nanobanana2.1 (default, most of nanobananapro at a lower price), seedream, seedream-5-lite, seedream-5-pro. Default: nanobanana2.1"
       ),
   },
   async ({ image_url, prompt, model }) => {
@@ -256,9 +256,9 @@ server.tool(
       ),
     model: z
       .enum(MODELS)
-      .default("nanobananapro")
+      .default("nanobanana2.1")
       .describe(
-        "AI model to use. Default: nanobananapro"
+        "AI model to use. Default: nanobanana2.1"
       ),
     max_wait_seconds: z
       .number()
