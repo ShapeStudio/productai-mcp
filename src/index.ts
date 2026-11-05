@@ -14,6 +14,8 @@ const MODELS = [
   "gpt-2",
   "gpt-2.5",
   "gpt-2.5-precise",
+  "gpt-2.6",
+  "gpt-2.6-precise",
   "kontext-pro",
   "kontext-max",
   "nanobananapro",
@@ -85,12 +87,12 @@ const server = new McpServer({
 // --- Tool: Generate Image ---
 server.tool(
   "generate_image",
-  "Generate an AI-powered product photo. Provide a product image URL and a text prompt describing the desired edit or scene. Supports a single image (all models) or multiple images (up to 5; up to 10 for seedream-5-lite/seedream-5-pro) with the gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, nanobanana*, and seedream* models.",
+  "Generate an AI-powered product photo. Provide a product image URL and a text prompt describing the desired edit or scene. Supports a single image (all models) or multiple images (up to 5; up to 10 for seedream-5-lite/seedream-5-pro) with the gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, gpt-2.6, gpt-2.6-precise, nanobanana*, and seedream* models.",
   {
     image_url: z
       .union([z.string().url(), z.array(z.string().url())])
       .describe(
-        "URL of the product image, or an array of URLs for multi-image models (gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, nanobanana, nanobananapro, nanobanana2, nanobanana2.1, seedream, seedream-5-lite, seedream-5-pro)"
+        "URL of the product image, or an array of URLs for multi-image models (gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, gpt-2.6, gpt-2.6-precise, nanobanana, nanobananapro, nanobanana2, nanobanana2.1, seedream, seedream-5-lite, seedream-5-pro)"
       ),
     prompt: z
       .string()
@@ -101,7 +103,7 @@ server.tool(
       .enum(MODELS)
       .default("nanobanana2.1")
       .describe(
-        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, gpt-1.5, gpt-2, gpt-2.5 (best GPT model), gpt-2.5-precise (small targeted edits that keep the product, composition and background unchanged), kontext-pro, kontext-max, nanobananapro, nanobanana, nanobanana2, nanobanana2.1 (default, most of nanobananapro at a lower price), seedream, seedream-5-lite, seedream-5-pro. Default: nanobanana2.1"
+        "AI model to use. Options: gpt-low, gpt-medium, gpt-high, gpt-1.5, gpt-2, gpt-2.5 and gpt-2.5-precise (previous version), gpt-2.6 (best GPT model), gpt-2.6-precise (small targeted edits that keep the product, composition and background unchanged), kontext-pro, kontext-max, nanobananapro, nanobanana, nanobanana2, nanobanana2.1 (default, most of nanobananapro at a lower price), seedream, seedream-5-lite, seedream-5-pro. Default: nanobanana2.1"
       ),
   },
   async ({ image_url, prompt, model }) => {
@@ -247,7 +249,7 @@ server.tool(
     image_url: z
       .union([z.string().url(), z.array(z.string().url())])
       .describe(
-        "URL of the product image, or an array of URLs for multi-image models (gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, nanobanana, nanobananapro, nanobanana2, nanobanana2.1, seedream, seedream-5-lite, seedream-5-pro)"
+        "URL of the product image, or an array of URLs for multi-image models (gpt-1.5, gpt-2, gpt-2.5, gpt-2.5-precise, gpt-2.6, gpt-2.6-precise, nanobanana, nanobananapro, nanobanana2, nanobanana2.1, seedream, seedream-5-lite, seedream-5-pro)"
       ),
     prompt: z
       .string()
